@@ -1,7 +1,7 @@
-package com.company;
+package com.itLambda.src.com.company;
 
 import java.util.ArrayList;
-
+@FunctionalInterface
 public interface StringToString {
-    String concotinateStrings(String s, Character ch);
+    String concotinateStrings(ArrayList<String> s);
 }

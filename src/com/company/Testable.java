@@ -1,4 +1,4 @@
-package com.company;
+package com.itLambda.src.com.company;
 
 @FunctionalInterface
 public interface Testable {

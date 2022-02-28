@@ -1,23 +1,46 @@
-package com.company;
+package com.itLambda.src.com.company;
 
-import java.sql.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
 
 
-        String string = "Эти классы похожи, практически двойники, они имеют одинаковые конструкторы, одни и те же методы, которые одинаково используются. Единственное их различие состоит в том, что класс StringBuffer синхронизированный и потокобезопасный. То есть класс StringBuffer удобнее использовать в многопоточных приложениях, где объект данного класса может меняться в различных потоках. Если же речь о многопоточных приложениях не идет, то лучше использовать класс StringBuilder, который не потокобезопасный, но при этом работает быстрее, чем StringBuffer в однопоточных приложениях.";
-        StringBuffer editedstring = new StringBuffer("");
+        String string1 = "Эти классы похожи, практически двойники, они имеют одинаковые конструкторы, одни и те же методы, которые одинаково используются. Единственное их различие состоит в том, что класс StringBuffer синхронизированный и потокобезопасный. То есть класс StringBuffer удобнее использовать в многопоточных приложениях, где объект данного класса может меняться в различных потоках. Если же речь о многопоточных приложениях не идет, то лучше использовать класс StringBuilder, который не потокобезопасный, но при этом работает быстрее, чем StringBuffer в однопоточных приложениях.";
 
-        editedstring.append(String.valueOf(string));
+        ArrayList stringArrayList = new ArrayList<String>();
 
-        System.out.println(editedstring);
+        stringArrayList.add("Эти");
+        stringArrayList.add("классы");
+        stringArrayList.add("похожи");
+        stringArrayList.add("практически");
+        stringArrayList.add("двойники");
+        stringArrayList.add("они");
 
-        String[] words = string.split("\\s*");
 
-        System.out.println(Arrays.toString(words));
+//        StringBuffer editedstring = new StringBuffer("");
+
+
+        StringToString stringArrayList2 = (s) -> {
+            String res = "";
+            for (String chars : s
+            ) {
+                res+=s;
+            }
+            return res;
+        };
+
+        System.out.println(stringArrayList2.concotinateStrings(stringArrayList));
+
+
+
+//        editedstring.append(String.valueOf(string));
+
+//        System.out.println(editedstring);
+//
+//        String[] words = string.split("\\s*");
+//
+//        System.out.println(Arrays.toString(words));
 //        for (int i = 0; i < editedstring.length(); i++) {
 //            if ((editedstring.charAt(i))  == ' ' || (editedstring.charAt(i))  == ',' || (editedstring.charAt(i))  == '.'){
 //                editedstring.deleteCharAt(i);
@@ -27,7 +50,7 @@ public class Main {
 //                editedstring.deleteCharAt(i);
 //            }
 //        }
-        System.out.println(editedstring);
+//        System.out.println(editedstring);
 
     }
 }
